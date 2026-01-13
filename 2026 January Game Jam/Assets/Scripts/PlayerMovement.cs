@@ -3,11 +3,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 1.0f;
-    public float jumpStrength = 1.0f;
+    public float jumpStrength = 5f;
     public Rigidbody rb;
     private float horizontalInput;
     private float verticalInput;
-    private bool isGrounded = true;
+    private bool isGrounded = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,6 +21,11 @@ public class PlayerMovement : MonoBehaviour
         {
             Jump();
         }
+    }
+    private void FixedUpdate()
+    {
+        float moveInput = Input.GetAxisRaw("Horizontal");
+        rb.linearVelocity = new Vector3(moveInput * speed, rb.linearVelocity.y);
     }
     void Jump()
     {
