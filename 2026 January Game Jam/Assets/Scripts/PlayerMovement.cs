@@ -24,8 +24,10 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        float moveInput = Input.GetAxisRaw("Horizontal");
-        rb.linearVelocity = new Vector3(moveInput * speed, rb.linearVelocity.y);
+        float moveInputLR = Input.GetAxisRaw("Horizontal");
+        rb.linearVelocity = new Vector3(moveInputLR * speed, rb.linearVelocity.z);
+        float moveInputFB = Input.GetAxisRaw("Vertical");
+        rb.linearVelocity = new Vector3(moveInputFB * speed, rb.linearVelocity.x);
     }
     void Jump()
     {
