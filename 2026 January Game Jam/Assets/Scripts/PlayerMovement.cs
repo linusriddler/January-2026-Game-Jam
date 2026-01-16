@@ -24,10 +24,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        float moveInputLR = Input.GetAxisRaw("Horizontal");
-        rb.linearVelocity = new Vector3(moveInputLR * speed, rb.linearVelocity.z);
-        float moveInputFB = Input.GetAxisRaw("Vertical");
-        rb.linearVelocity = new Vector3(moveInputFB * speed, rb.linearVelocity.x);
+        Movement();
     }
     void Jump()
     {
@@ -46,5 +43,15 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
+    private void Movement()
+    {
+        float x = Input.GetAxisRaw("Horizontal");
+        float z = Input.GetAxisRaw("Vertical");
+
+        Vector3 moveDirection = transform.right * x + transform.forward * z;
+        Vector3 velocity = moveDirection * speed;
+
+        rb.linearVelocity= new Vector3(velocity.x, rb.linearVelocity.y, velocity.z);
     }
 }
