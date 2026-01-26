@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 1037
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -326,7 +326,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/SimpleNaturePack/Prefabs
+    - Assets/Real Stars Skybox
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -336,17 +336,17 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/SimpleNaturePack/Prefabs
+  - Assets/Real Stars Skybox
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\02MADDOX.GREENSPOON\Maddox Greenspoon\Repositories\January-2026-Game-Jam\2026
     January Game Jam
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 161}
-    m_SelectedIDs: a2ae0000
-    m_LastClickedID: 44706
-    m_ExpandedIDs: 0000000030ad000048ae00005aae000062ae000000ca9a3b
+    scrollPos: {x: 0, y: 209}
+    m_SelectedIDs: dab10000
+    m_LastClickedID: 45530
+    m_ExpandedIDs: 0000000028af00002aaf00002caf00004cb1000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -375,7 +375,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000030ad0000
+    m_ExpandedIDs: 0000000028af00002aaf00002caf0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -403,7 +403,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -504,23 +504,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 28f4ffff
-      m_LastClickedID: -3032
-      m_ExpandedIDs: 8afaffff8cfaffff86ac0000
+      m_SelectedIDs: fef3ffff
+      m_LastClickedID: 0
+      m_ExpandedIDs: dcf9ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Player
-        m_OriginalName: Player
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 44166
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 4
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 4}
@@ -1110,9 +1110,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -16.771261, y: 21.05427, z: 75.01216}
+    m_Target: {x: -5.0988836, y: 14.250461, z: 18.091333}
     speed: 2
-    m_Value: {x: -16.773924, y: 21.053093, z: 75.00927}
+    m_Value: {x: -5.0988836, y: 14.250461, z: 18.091333}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1158,11 +1158,11 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.008932474, y: -0.97739697, z: 0.20710896, w: -0.04226031}
+    m_Target: {x: -0.0062968037, y: -0.9887926, z: 0.14368565, w: -0.042416327}
     speed: 2
-    m_Value: {x: -0.009242829, y: -0.9773009, z: 0.20708863, w: -0.043724947}
+    m_Value: {x: -0.0060806754, y: -0.9887587, z: 0.14368093, w: -0.0409291}
   m_Size:
-    m_Target: 0.8660254
+    m_Target: 16.321747
     speed: 2
     m_Value: 0.8660254
   m_Ortho:
