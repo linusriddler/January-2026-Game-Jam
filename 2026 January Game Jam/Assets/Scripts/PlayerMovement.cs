@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizontalInput;
     private float verticalInput;
     private bool isGrounded = false;
+    public int playerHealth = 10;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -53,5 +54,15 @@ public class PlayerMovement : MonoBehaviour
         Vector3 velocity = moveDirection * speed;
 
         rb.linearVelocity= new Vector3(velocity.x, rb.linearVelocity.y, velocity.z);
+    }
+    public void TakeDamage(int amount)
+    {
+        playerHealth -= amount;
+        Debug.Log("Player hit! Health: " + playerHealth);
+
+        if (playerHealth <= 0)
+        {
+            Debug.Log("Player Died");
+        }
     }
 }
