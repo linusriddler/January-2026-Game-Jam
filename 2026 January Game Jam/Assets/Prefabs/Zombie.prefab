@@ -742,7 +742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EvilGuy
   evilHealth: 3
-  player: {fileID: 0}
+  player: {fileID: 1962765176635151842, guid: c8761c0b89f20234f8de9d3d3964c095, type: 3}
   speed: 1.5
   stopDistance: 1.5
   deathDelay: 1.2

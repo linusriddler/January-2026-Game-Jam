@@ -6,7 +6,7 @@ public class EvilGuy : MonoBehaviour
     public int evilHealth = 5;
 
     public Transform player;
-    public float speed = 3f;
+    public float speed = 1.5f;
     public float stopDistance = 1.5f;
 
     public float deathDelay = 1.2f;
@@ -34,9 +34,14 @@ public class EvilGuy : MonoBehaviour
 
         if (distance > stopDistance)
         {
+            // Move toward player
             Vector3 direction = (player.position - transform.position).normalized;
             transform.position += direction * speed * Time.deltaTime;
-            transform.LookAt(player);
+
+            // Rotate toward player WITHOUT rotating on Y
+            Vector3 lookPos = player.position - transform.position;
+            lookPos.y = 0f; // lock Y axis
+            transform.rotation = Quaternion.LookRotation(lookPos);
         }
     }
 
