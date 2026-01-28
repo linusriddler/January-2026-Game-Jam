@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:2026 January Game Jam/Assets/SimpleNaturePack/Materials.meta
+guid: 207b8ab1eea6c7743bd8e59e23b04939
+========
 guid: f54d1bd14bd3ca042bd867b519fee8cc
+>>>>>>>> NPC-Branch:2026 January Game Jam/Assets/TextMesh Pro.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
