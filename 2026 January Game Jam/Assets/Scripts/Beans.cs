@@ -5,14 +5,11 @@ public class Beans : MonoBehaviour
 {
     public float floatSpeed = 2f;
     public float floatHeight = 0.5f;
-
     private Vector3 startPos;
-
     void Start()
     {
         startPos = transform.position;
     }
-
     void Update()
     {
         // Smooth up-and-down floating

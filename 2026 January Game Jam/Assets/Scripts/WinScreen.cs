@@ -5,6 +5,7 @@ public class WinScreen : MonoBehaviour
     public static WinScreen instance;
 
     public CanvasGroup winPanel;
+    public CanvasGroup gameOverPanel;
     public float fadeDuration = 1.5f;
 
     void Awake()
@@ -15,23 +16,32 @@ public class WinScreen : MonoBehaviour
             Destroy(gameObject);
     }
 
+    // ---------- WIN ----------
     public void ShowWinScreen()
     {
-        StartCoroutine(FadeIn());
+        StartCoroutine(FadeIn(winPanel));
     }
 
-    IEnumerator FadeIn()
+    // ---------- GAME OVER ----------
+    public void ShowGameOverScreen()
+    {
+        StartCoroutine(FadeIn(gameOverPanel));
+    }
+
+    IEnumerator FadeIn(CanvasGroup panel)
     {
         float t = 0f;
+        panel.alpha = 0f;
+        panel.gameObject.SetActive(true);
 
         while (t < fadeDuration)
         {
             t += Time.deltaTime;
-            winPanel.alpha = Mathf.Lerp(0, 1, t / fadeDuration);
+            panel.alpha = Mathf.Lerp(0, 1, t / fadeDuration);
             yield return null;
         }
 
-        winPanel.alpha = 1;
+        panel.alpha = 1f;
         Time.timeScale = 0f; // freeze game
     }
 }
