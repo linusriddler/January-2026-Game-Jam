@@ -700,8 +700,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.7732685, z: 0.6560228}
-  m_Center: {x: 0, y: 0.95627177, z: -0.048724294}
+  m_Size: {x: 1.0239944, y: 1.7732685, z: 0.8483696}
+  m_Center: {x: 0.011997223, y: 0.95627177, z: 0.047449112}
 --- !u!54 &2964898374767290833
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -742,7 +742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EvilGuy
   evilHealth: 3
-  player: {fileID: 1962765176635151842, guid: c8761c0b89f20234f8de9d3d3964c095, type: 3}
+  player: {fileID: 0}
   speed: 1.5
   stopDistance: 1.5
   deathDelay: 1.2

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Runtime.CompilerServices;
 public class WinScreen : MonoBehaviour
 {
     public static WinScreen instance;
@@ -7,7 +8,13 @@ public class WinScreen : MonoBehaviour
     public CanvasGroup winPanel;
     public CanvasGroup gameOverPanel;
     public float fadeDuration = 1.5f;
-
+    public GameObject DeathCamera;
+    private bool Dead;
+    private void Start()
+    {
+        DeathCamera.SetActive(false);
+        Dead = false;
+    }
     void Awake()
     {
         if (instance == null)
@@ -20,12 +27,14 @@ public class WinScreen : MonoBehaviour
     public void ShowWinScreen()
     {
         StartCoroutine(FadeIn(winPanel));
+        Dead = true;
     }
 
     // ---------- GAME OVER ----------
     public void ShowGameOverScreen()
     {
         StartCoroutine(FadeIn(gameOverPanel));
+        Dead = true;
     }
 
     IEnumerator FadeIn(CanvasGroup panel)
@@ -33,6 +42,7 @@ public class WinScreen : MonoBehaviour
         float t = 0f;
         panel.alpha = 0f;
         panel.gameObject.SetActive(true);
+        DeathCamera.SetActive(true);
 
         while (t < fadeDuration)
         {
@@ -43,5 +53,14 @@ public class WinScreen : MonoBehaviour
 
         panel.alpha = 1f;
         Time.timeScale = 0f; // freeze game
+    }
+    private void Update()
+    {
+        if ((Dead) && Input.GetKeyDown(KeyCode.Space)) 
+        {
+            Time.timeScale = 1f; // just in case the game was frozen
+            UnityEngine.SceneManagement.SceneManager.LoadScene(
+                UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }
