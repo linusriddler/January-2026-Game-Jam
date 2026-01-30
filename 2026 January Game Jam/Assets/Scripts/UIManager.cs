@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI collectibleText;
     private int collectibleCount = 0;
 
-    public int beansToWin = 10; // 👈 win condition
+    public int beansToWin = 5; // 👈 win condition
 
     void Awake()
     {
