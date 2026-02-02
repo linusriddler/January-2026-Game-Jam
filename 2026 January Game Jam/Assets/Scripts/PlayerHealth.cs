@@ -15,7 +15,7 @@ public class PlayerHealth : MonoBehaviour
 
     private float damageTimer = 0f;
     public Rigidbody rb;
-
+    public int DeathDamage = 200;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -43,7 +43,13 @@ public class PlayerHealth : MonoBehaviour
             damageTimer = damageCooldown;
         }
     }
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("DeathPlate"))
+        {
+            TakeDamage(DeathDamage, null);
+        }
+    }
     void TakeDamage(int damage, Transform enemy)
     {
         playerHealth -= damage;
