@@ -27,7 +27,7 @@ public class ZombieSpawnManager : MonoBehaviour
 
         GameObject zombie = Instantiate(zombiePrefab, spawnPosition, Quaternion.identity);
 
-        // 🔥 THIS IS THE FIX
+        // 🔥
         EvilGuy evilGuy = zombie.GetComponent<EvilGuy>();
         if (evilGuy != null)
         {
